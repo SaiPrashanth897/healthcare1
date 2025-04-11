@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Round Note - Smart Care Assistant</title>
+  <link rel="stylesheet" href="add.css" />
+</head>
+<body>
+  <div class="note-container">
+    <h2>Add / Update Round Note</h2>
+
+    <form id="roundNoteForm">
+      <!-- Patient selection -->
+      <label for="patientSelect">Select Patient:</label>
+      <select id="patientSelect" required>
+        <option value="">Loading patients...</option>
+      </select>
+
+      <!-- Vitals -->
+      <h3>Vitals</h3>
+      <input type="text" id="bp" placeholder="Blood Pressure (e.g., 120/80)" />
+      <input type="text" id="hr" placeholder="Heart Rate (bpm)" />
+      <input type="text" id="spo2" placeholder="SpO2 (%)" />
+      <input type="text" id="temp" placeholder="Temperature (°C)" />
+      <input type="text" id="rr" placeholder="Respiratory Rate" />
+
+      <!-- Symptoms -->
+      <h3>Symptoms</h3>
+      <textarea id="symptoms" rows="3" placeholder="Describe symptoms..."></textarea>
+      <button type="button" id="addTemplate">🩺 Use Common Symptoms</button>
+
+      <!-- Notes -->
+      <h3>Notes</h3>
+      <textarea id="noteText" rows="4" placeholder="Additional notes..."></textarea>
+      <button type="button" id="voiceBtn">🎙️ Voice-to-Text</button>
+
+      <button type="submit">Save Note</button>
+    </form>
+
+    <div id="statusMessage"></div>
+  </div>
+
+  <script type="module" src="add.js"></script>
+</body>
+</html>

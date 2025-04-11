@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prescriptions - Smart Care Assistant</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">SmartCare</h2>
+      <nav>
+        <ul>
+          <li><a href="doctor-dashboar.html">🏠 Dashboard</a></li>
+          <li><a href="patient.html">👥 Patients</a></li>
+          <li><a href="add-note.html">📝 Add Note</a></li>
+          <li><a href="prescriptions.html" class="active">💊 Prescriptions</a></li>
+          <li><a href="trends.html">📈 Trends</a></li>
+          <li><a href="alerts.html">⚠️ ADR Alerts</a></li>
+          <li><a href="reports.html">📄 Reports</a></li>
+          <li><a href="settings.html">⚙️ Settings</a></li>
+          <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>💊 Prescriptions</h1>
+        <p>Select patient and add/edit prescriptions. Interactions will be auto-checked.</p>
+      </header>
+
+      <!-- Form Section -->
+      <section class="form-section">
+        <form id="prescriptionForm">
+          <label for="patientSelect">Select Patient</label>
+          <select id="patientSelect" required></select>
+
+          <label for="medicineSelect">Select Medicine</label>
+          <select id="medicineSelect" required>
+            <option value="198440">Paracetamol</option>
+            <option value="5640">Ibuprofen</option>
+            <option value="617314">Metformin</option>
+            <option value="1049630">Amoxicillin</option>
+            <!-- Add more with correct RxCUI if needed -->
+          </select>
+
+          <label for="dosageSelect">Dosage</label>
+          <select id="dosageSelect" required>
+            <option value="250mg">250 mg</option>
+            <option value="500mg">500 mg</option>
+            <option value="1000mg">1000 mg</option>
+          </select>
+
+          <button type="submit">Add Prescription</button>
+        </form>
+      </section>
+
+      <!-- Result section -->
+      <section class="prescription-results">
+        <h2>Interaction Result</h2>
+        <div id="interactionResult"></div>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="prescriptions.js"></script>
+</body>
+</html>

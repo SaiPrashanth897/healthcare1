@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Smart Care Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="auth-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="loginUsername" placeholder="Username" required />
+      <input type="password" id="loginPassword" placeholder="Password" required />
+      <select id="loginRole" required>
+        <option value="">Select Role</option>
+        <option value="doctor">Doctor</option>
+        <option value="patient">Patient</option>
+      </select>
+      <button type="submit">Login</button>
+      <p>Don't have an account? <a href="signup.html">Sign up</a></p>
+    </form>
+  </div>
+  <link rel="stylesheet" href="dash.css" />
+<script type="module" src="login.js"></script>
+
+
+</body>
+</html>

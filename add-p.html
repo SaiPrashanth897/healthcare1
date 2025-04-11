@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Add Patient - Smart Care Assistant</title>
+  <link rel="stylesheet" href="add.css">
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">SmartCare</h2>
+      <nav>
+        <ul>
+          <li><a href="doctor-dashboar.html">🏠 Dashboard</a></li>
+          <li><a href="patient.html">👥 Patients</a></li>
+          <li><a href="add-p.html" class="active">➕ Add Patient</a></li>
+          <li><a href="add-note.html">📝 Rounds</a></li>
+          <li><a href="prescriptions.html">💊 Prescriptions</a></li>
+          <li><a href="trends.html">📈 Trends</a></li>
+          <li><a href="alerts.html">⚠️ ADR Alerts</a></li>
+          <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="form-container">
+        <h2>Add New Patient</h2>
+        <form id="addPatientForm">
+          <input type="text" id="name" placeholder="Patient Name" required />
+          <input type="number" id="age" placeholder="Age" required />
+          <input type="text" id="condition" placeholder="Condition (e.g., Diabetes)" required />
+          <input type="text" id="contact" placeholder="Contact Info" />
+          <button type="submit">Add Patient</button>
+        </form>
+        <p id="statusMsg"></p>
+      </div>
+    </main>
+  </div>
+
+  <script type="module" src="add-p.js"></script>
+</body>
+</html>

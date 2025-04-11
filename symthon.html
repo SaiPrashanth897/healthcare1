@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Symptom Trends - Smart Care Assistant</title>
+  <link rel="stylesheet" href="styles/dashboard.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="dashboard-container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2 class="logo">SmartCare</h2>
+      <nav>
+        <ul>
+          <li><a href="dashboard.html">🏠 Dashboard</a></li>
+          <li><a href="patients.html">👥 Patients</a></li>
+          <li><a href="rounds.html">📝 Add Note</a></li>
+          <li><a href="prescriptions.html">💊 Prescriptions</a></li>
+          <li><a href="symptom-trends.html" class="active">📈 Trends</a></li>
+          <li><a href="alerts.html">⚠️ ADR Alerts</a></li>
+          <li><a href="reports.html">📄 Reports</a></li>
+          <li><a href="settings.html">⚙️ Settings</a></li>
+          <li><a href="#" id="logoutBtn">🚪 Logout</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header>
+        <h1>📈 Symptom Trends</h1>
+        <p>Select a patient to view symptom and vitals history.</p>
+      </header>
+
+      <section class="trend-section">
+        <label for="patientSelect">Select Patient:</label>
+        <select id="patientSelect"></select>
+
+        <canvas id="symptomChart" width="600" height="300"></canvas>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="symptom-trends.js"></script>
+</body>
+</html>
